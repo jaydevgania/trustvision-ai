@@ -1,0 +1,13 @@
+[build]
+  base    = "frontend/dashboard"
+  command = "npm install --include=dev && npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+  NPM_CONFIG_PRODUCTION = "false"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
